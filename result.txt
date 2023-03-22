@@ -1,0 +1,202 @@
+
+
+Harrie Adams  Senior Software Engineer
+confidenceharrieadams0304@outlook.com
+Schouw 195, Lelystad, Flevoland, Netherlands
++15407265280
+live:.cid.90b6da2b1ffecfaa
+PROFESSIONAL EXPERIENCE
+Team Lead & Senior Computer Vision Software Engineer
+Boston Dynamics
+03/2020 – 01/2023 | Massachusetts, United States
+•Managed and designed research and analysis to improve 
+business performance across and within 7 departments.
+•Processed time-series big data using Hadoop and PySpark, then 
+applied other model.
+•Implemented stock trend prediction using Google Cloud 
+Platform (GCP) and Business Analysis using RNN, Bi-LSTM 
+and Markov Model.
+•Leveraged big data to discover patterns and solve strategic 
+analytic business problems
+•Have done An end-to-end LSTM-based Ping Pong Ball 
+Rotation trajectory prediction model.
+•Developed self-driving car software for integrating multiple 
+sensors and three types of cameras and deployed on car and 
+self-driving robot.
+•Designed and Built the immersive 3D model that allowed users 
+to explore the model in an engaging way.
+•Design, test, and deploy new artificial intelligence 
+functionalities for 13 major projects of the company worth 
+$4.7M in total.
+•Experience with various frameworks such as TensorFlow, 
+Pytorch, Scikit-Learn and Keras in cross-platform like Linux 
+and so on.
+•Developed an MLOps pipeline for training, deploying, 
+monitoring, and managing machine learning models in 
+production environment with high availability features enabled 
+using Kubeflow, TensorFlow Extended Airflow, MLFlow, etc
+Project Manager & Computer Vision Software Engineer
+Granify
+07/2017 – 02/2020 | Edmonton, Alberta, Canada
+•Developing robust software for integrating multiple sensors 
+and tracking systems.
+•Develop novel real-time 3D scene reconstruction techniques 
+and delivering accurate visual odometry systems
+•By implementing Biometrics Project using optical sensors and 
+pattern recognition algorithms, the company's monthly income 
+increased by 26%
+•Design and execute well-engineered, easy-to-maintain, reliable, 
+and bug-free code for various company applications in 
+collaboration with other AI engineers,data scientists, 
+programmers, and software personnel.
+•Decision Trees, Clustering, Customize Neural Networks, and 
+SVMs were used to analyze customer data such as purchasing 
+power, demographics, and other behavioral data to identify 
+customer personality traits.
+Machine Learning Engineer
+Ubie, Inc.
+04/2015 – 03/2017 | Tokyo, Japan
+•Developed molecular dynamics simulations using machine 
+learning algorithms to identify protein-DNA interactions with 
+up to 95% fidelity. And the developed system was further 
+deployed to medical robots and medical robot arms.
+•Improved accuracy of simulation up to 30% using various 
+algorithms.
+•Designed and completed analysis systems to extract 
+information from large scale data.
+•Predicted product sales to within 2% by applying logistic 
+regression model
+SUMMARY
+I  am  a  Senior  Software  Engineer  with  with  10  years  of
+experience in programming, 8 years of professional experience as
+an artificial intelligence engineer and approximately 3 years of
+web development.
+•My  expertise  lies  in  developing  and  deploying  machine 
+learning  models,  computer  vision  systems,  natural  language 
+processing (NLP) systems and deep learning architectures.
+•I  am  experienced  in  leading  teams  of  engineers  to  develop 
+complex Artificial intelligence Software.
+•Having  strong  background  in  mathematics,  statistics,  and 
+software engineering.
+•Have worked on projects ranging from autonomous vehicles to 
+medical diagnostics.
+•Experience in 3D modeling, 3D texturing, and 3D animation 
+using Artificial Intelligence Techniques.
+•My  experience  includes  working  with  various  Web 
+technologies  such  as  Java,  JavaScript,  node.js,  react,  angular, 
+HTML/CSS, SQL, and NoSQL databases.
+•I am passionate about creating high-quality software solutions 
+that are reliable and maintainable.
+•I  have  5+  years  of  working  experience  in  setting  up  and 
+managing  cloud  infrastructure,  deploying  applications,  and 
+managing databases with AWS and GCP
+•I am familiar with the various services offered by both AWS 
+and GCP such as EC2, S3, RDS, Lambda, Cloud Functions, 
+Compute Engine, App Engine, Big Query etc.
+•I have also 4 years of working experience in setting up CI/CD 
+pipelines using Jenkins and other tools.
+•As programming languages, Python, Java, C++, C# , R, Django, 
+MATLAB, JavaScript, React are my fundamental and first 
+languages.
+SKILLS
+Programming Languages (Python, C/C++, C#, Matlab,
+JavaScript, PHP, React, Java, Angular, R, Matlab,
+HTML, CSS, Scala, Rubyonrails, Perl, nextjs, Threejs,
+Web3)
+Artificial Intelligence (Computer Vision, Machine
+Learning, Deep Learning, OpenCV, YOLO, GANs,
+Keras, TensorFlow, Pandas, Pytorch, Unity, Autodesk
+3ds Max, Maya, Virtual agents, Image Processing,
+Object Tracking, 3D rendering, Pattern Recognition,
+Sensor fusion technique, Biometrics, Automation and
+Robotics, Statistical Analysis)
+Big Data and Data Management (Data Quality, Apache
+Hadoop, Data Pipelines ETLs, Data Modeling, Data
+Visualizing. Rapidminer, Apache Spark, Tableau,
+Power BI, Pyspark, Hive, Blockchain, MySQL,
+MongoDB, NoSQL)
+Cloud Platform (AWS, GCP, Azure)
+Devops & MLops (Flask, Docker, Kubernetes, Git)
+
+Full Stack Engineer & Machine Learning Engineer
+iCoderz Solutions Pvt. Ltd.
+06/2013 – 01/2015 | Maryland, United States
+•Developed the Online Shopping Store where customers can 
+purchase items from a variety of categories.
+•Simple android projects related with marketing, face-
+recognition, whatsapp bot, telegram bot
+•E-commerce sites with React.js and express.js
+•Several computer vision project for Android app
+•Developed a web application in 2 months which generates 
+credentials for the new employees for instance employee id.
+•C++ project for remote packet transfer and machine learning 
+etc
+PERSONAL PROJECT
+Self-driving car software
+This software is designed to interpret the data it receives and 
+make decisions about how to navigate safely and efficiently.
+My developed software has been distributed to fully self-driving 
+cars as well as semi-autonomous cars, driving robots, and drones, 
+bringing innovation self-driving software development and many 
+benefits in the company.
+Custom 3D model experience for a client
+This 3D model was designed to be interactive and engaging, 
+allowing users to explore the 3D model from different angles and 
+perspectives. I incorporated audio and visual effects to enhance 
+the user confidence. The end result was an immersive 3D model 
+that allowed users to explore the model in an engaging way.
+Ping pong ball rotation trajectory prediction machine 
+learning model
+This model is used to predict the trajectory of a ping pong ball 
+when it is hit by a paddle. 
+Especially, the model is used to generate realistic simulations of 
+ping pong matches for training purposes.
+AI powered Stock Price Prediction engine
+I Implemented stock trend prediction using deep learning model.
+The goal of the project was to create a system that could 
+accurately predict stock prices based on historical data.
+I deployed the model on GCP using Google App Engine.
+This allowed me to make predictions in real-time with minimal 
+latency.
+Customer Personality Analysis with Machine Learning 
+Model
+I used Decision Trees, Clustering, Customize Neural Networks, 
+and SVMs to analyze customer data such as purchasing power, 
+demographics, and other behavioral data to identify customer 
+personality traits.
+Customer detection and Customer personality analysis 
+system  in markets and stores by facial recognition.
+This system would use facial recognition technology to identify 
+customers as they entered the store, allowing for more accurate 
+tracking of customer behavior.
+And it also could analyze customer behavior in order to better 
+understand their preferences and buying habits.
+Whatsapp bot with NLP
+This WhatsApp bot is a chatbot that is specifically designed to 
+interact with users on the WhatsApp messaging platform. It is 
+used to automate customer service tasks, provide information, 
+and even complete transactions. This bot is powered by artificial 
+intelligence and natural language processing technology, which 
+allows them to understand user messages and respond in a 
+meaningful way.
+Online Shopping Store
+This project involved creating a website that allowed customers 
+to browse and purchase products from the store include a 
+shopping cart, payment processing, and customer accounts.
+EDUCATION
+Bachelor of Computer Science(BCompSc)
+University of California, Los Angeles (UCLA)
+09/2009 – 05/2013 | Los Angeles, CA, United States
+INTERESTS
+HikingMusicBasketball
+Image ProcessingComputer Vision
+Machine Learning
+MY DREAM
+My dream is to make my family live happily.
+And And I want that the artificial intelligence systems I develop 
+actually bring benefits to people and are widely used in various 
+fields.
+I think artificial intelligence has yet to reveal its true self.
+I will contribute to the development of artificial intelligence with 
+my technology, and I want to see the future of artificial
+intelligence.
