@@ -7,9 +7,7 @@ import setAuthToken from "./util/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-
 import Navbar from "./components/layout/Navbar";
-// import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";

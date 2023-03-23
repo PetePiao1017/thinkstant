@@ -43,7 +43,10 @@ const DragDropFile = () => {
           })
           .then(res => {
             if(res.data.status === 'success'){
-                history.push('/chatroom')
+                history.push({
+                  pathname:'/chatroom',
+                  state: {detail: res.data.result}
+                })
             }
           })
           .catch((error) => {
