@@ -191,14 +191,14 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             for (let i = 0; i < req.files.length; i += 1){
                 await extract_data_img(req.files[i].filename);
             }
-            res.send({status: "success"})
+            res.send({status: "success", result: text})
         }
         //FILE TYPE == Audio
         if(req.files[0].mimetype.includes('audio')){
             for (let i = 0; i < req.files.length; i += 1){
                 await extract_data_audio(req.files[i].filename);
             }
-            res.send({status: "success"})
+            res.send({status: "success", result: text})
         }
     }
 })
