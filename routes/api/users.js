@@ -13,8 +13,10 @@ const tesseract = require("node-tesseract-ocr");
 const path = require('path');
 const FormData = require('form-data');
 const axios = require("axios");
+const dotenv = require('dotenv').config();
 
 const OPEN_API_KEY = process.env.OPEN_API_KEY;
+
 const model = "whisper-1";
 
 let text = "";
@@ -70,7 +72,7 @@ const extract_data_audio = async (name) => {
     const txt = await axios
         .post("https://api.openai.com/v1/audio/transcriptions", formData, {
             headers: {
-                Authorization: `Bearer ${"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"}`,
+                Authorization: `Bearer ${OPEN_API_KEY}`,
                 "Content-Type": `multipart/form-data;boundary = ${formData._boundary}`
             },
         })
@@ -181,8 +183,8 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             for (let i = 0; i < req.files.length ; i += 1){
                 await extract_data_pdf(req.files[i].filename);
             }
-            fs.writeFileSync("result.txt", text);
-            res.send({status: "success"})
+            // fs.writeFileSync("result.txt", text);
+            res.send({status: "success", result: text})
         }
         //File TYPE == Image'
         if(req.files[0].mimetype.includes('image')){
