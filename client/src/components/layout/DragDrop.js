@@ -32,7 +32,7 @@ const DragDropFile = () => {
           setIsShow(true)
         }
         else{
-          axios.post('http://localhost:5000/api/users/upload_file', formData, {
+          axios.post('/api/users/upload_file', formData, {
           headers: {
               "Content-type": "multipart/form-date",
             },
