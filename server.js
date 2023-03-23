@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 const path = require("path");
 const users = require("./routes/api/users");
+const dotenv = require('dotenv').config();
+
+
 
 const app = express();
 
@@ -16,7 +19,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-const dbURL =  "mongodb://localhost:27017/mern-auth";
+const dbURL =  "mongodb+srv://doadmin:fwJ4G5Ru9C3617d2@db-mongodb-nyc1-93823-92da013f.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb-nyc1-93823";
 
 //connect to MongoDB
 mongoose
