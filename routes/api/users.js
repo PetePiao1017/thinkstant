@@ -185,7 +185,6 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             for (let i = 0; i < req.files.length ; i += 1){
                 await extract_data_pdf(req.files[i].filename);
             }
-            // fs.writeFileSync("result.txt", text);
             res.send({status: "success", result: text})
         }
         //File TYPE == Image'
