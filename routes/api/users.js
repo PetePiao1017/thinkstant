@@ -49,14 +49,16 @@ const extract_data_pdf = async (name) =>{
           throw new Error(error)
         }
       }
-      const pdfRead = './uploads/' + name
-      await getPDF(pdfRead)
+      const pdfPath = path.join(__dirname, "../../uploads/", name);
+      await getPDF(pdfPath)
 }
 
 // Extract Data from Img
 const extract_data_img = async (name) => {
+
+    const filePath = path.join(__dirname, "../../uploads", name);
     
-    const txt = await tesseract.recognize('./uploads/' + name, config)
+    const txt = await tesseract.recognize(filePath, config)
     
     text += txt
 }
