@@ -13,9 +13,10 @@ const tesseract = require("node-tesseract-ocr");
 const path = require('path');
 const FormData = require('form-data');
 const axios = require("axios");
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv')
+const result = dotenv.config({path: path.resolve(__dirname, '../../.env')});
 
-const OPEN_API_KEY = process.env.OPEN_API_KEY;
+const OPEN_API_KEY = process.env.OPENAI_API_KEY;
 
 const model = "whisper-1";
 
@@ -36,8 +37,9 @@ const validateLoginInput = require("../../validation/login");
 // Load User model
 const User = require("../../models/UserSchema");
 
-// Extract Data Function
+// Extract Data from PDF
 const extract_data_pdf = async (name) =>{
+    
     const getPDF = async (file) => {
         let readFileSync = fs.readFileSync(file)
         try {
@@ -61,9 +63,7 @@ const extract_data_img = async (name) => {
 
 // Extract Data from Audio
 const extract_data_audio = async (name) => {
-
     const filePath = path.join(__dirname, "../../uploads/" + name);
-
 
     const formData = new FormData();
     formData.append("model", model);
@@ -191,7 +191,6 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             for (let i = 0; i < req.files.length; i += 1){
                 await extract_data_img(req.files[i].filename);
             }
-            fs.writeFileSync("result.txt", text);
             res.send({status: "success"})
         }
         //FILE TYPE == Audio
@@ -199,8 +198,6 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             for (let i = 0; i < req.files.length; i += 1){
                 await extract_data_audio(req.files[i].filename);
             }
-            fs.writeFileSync("result.txt", text);
-
             res.send({status: "success"})
         }
     }
