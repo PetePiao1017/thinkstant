@@ -15,6 +15,12 @@ const FormData = require('form-data');
 const axios = require("axios");
 const dotenv = require('dotenv')
 const result = dotenv.config({path: path.resolve(__dirname, '../../.env')});
+const WordExtractor = require("word-extractor"); 
+const extractor = new WordExtractor();
+const EPUBToText = require('../../utils/epub')
+
+const epubToText = new EPUBToText;
+
 
 const OPEN_API_KEY = process.env.OPENAI_API_KEY;
 
@@ -53,6 +59,17 @@ const extract_data_pdf = async (name) =>{
       await getPDF(pdfPath)
 }
 
+// Extract data from docx
+const extract_data_docx = async (name) =>{
+    const filePath = path.join(__dirname, "../../uploads", name);
+
+    const extracted = await extractor.extract(filePath)
+
+    text += extracted.getBody()
+
+}
+
+
 // Extract Data from Img
 const extract_data_img = async (name) => {
 
@@ -62,6 +79,14 @@ const extract_data_img = async (name) => {
     
     text += txt
 }
+
+// Extract Data from Epub
+const extract_data_epub = async (name) => {
+    const filePath = path.join(__dirname, "../../uploads", name);
+
+    await epubToText.extract(filePath, (err,txt,n) => console.log(txt))
+}
+
 
 // Extract Data from Audio
 const extract_data_audio = async (name) => {
@@ -179,29 +204,25 @@ router.post("/login",(req,res) => {
 router.post("/upload_file", upload.array('files'), async (req,res) => {
     if(!req.files) {
         throw Error("File Missing")
-    } else{
-        //Check the File type == PDF
-        if(req.files[0].mimetype === 'application/pdf'){
-            for (let i = 0; i < req.files.length ; i += 1){
-                await extract_data_pdf(req.files[i].filename);
-            }
-            res.send({status: "success", result: text})
-        }
-        //File TYPE == Image'
-        if(req.files[0].mimetype.includes('image')){
-            for (let i = 0; i < req.files.length; i += 1){
-                await extract_data_img(req.files[i].filename);
-            }
-            res.send({status: "success", result: text})
-        }
-        //FILE TYPE == Audio
-        if(req.files[0].mimetype.includes('audio')){
-            for (let i = 0; i < req.files.length; i += 1){
-                await extract_data_audio(req.files[i].filename);
-            }
-            res.send({status: "success", result: text})
+    } 
+    else
+    {
+        for (let i = 0; i < req.files.length ; i += 1)
+        {
+            //Check the File type == PDF
+            if(req.files[i].mimetype === 'application/pdf') await extract_data_pdf(req.files[i].filename);
+            //Check the File Type == docx
+            if(req.files[i].mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') await extract_data_docx(req.files[i].filename);
+            //Check the File Type == Epub
+            if (req.files[i].mimetype === 'application/epub+zip') await extract_data_epub(req.files[i].filename);
+            //File TYPE == Image'
+            if(req.files[i].mimetype.includes('image')) await extract_data_img(req.files[i].filename);
+            //FILE TYPE == Audio
+            if(req.files[i].mimetype.includes('audio')) await extract_data_audio(req.files[i].filename);
         }
     }
+    res.send({status: "success", result: text})
+    text = ''
 })
 
 //@route GET api/:id/verify/:token/
