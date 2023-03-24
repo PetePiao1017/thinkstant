@@ -19,7 +19,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-const dbURL =  "mongodb+srv://doadmin:fwJ4G5Ru9C3617d2@db-mongodb-nyc1-93823-92da013f.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb-nyc1-93823";
+const dbURL =  "mongodb://localhost:27017/mern-auth";
 
 //connect to MongoDB
 mongoose
@@ -69,11 +69,6 @@ if(process.env.NODE_ENV === 'production') {
   });
 }
 
-// app.use(express.static(path.join(__dirname, 'build')));
-
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
 
 const port = process.env.PORT || 5000;
 

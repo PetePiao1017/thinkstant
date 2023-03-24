@@ -22,14 +22,17 @@
     "concurrently": "^5.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
+    "epub": "^1.2.1",
     "express": "^4.17.1",
     "form-data": "^4.0.0",
     "fs": "^0.0.1-security",
+    "html-to-text": "^9.0.5",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "mongoose": "^5.8.2",
     "multer": "^1.4.5-lts.1",
+    "node-html-parser": "^6.1.5",
     "node-tesseract-ocr": "^2.2.1",
     "nodemailer": "^6.9.1",
     "passport": "^0.4.1",
@@ -45,7 +48,8 @@
     "redux-thunk": "^2.3.0",
     "text-from-image": "^1.1.1",
     "uninstall": "0.0.0",
-    "validator": "^12.1.0"
+    "validator": "^12.1.0",
+    "word-extractor": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
