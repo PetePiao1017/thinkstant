@@ -78,10 +78,10 @@
   }
 
   .error{
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
   .progressbar{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   .subtitle-1{
     text-align: center;
@@ -117,3 +117,10 @@
   .second-stage{
     width:80%!important;
   }
+  .space{
+    width: 10%;
+  }
+  .submit-btn{
+    border-radius: 12px;
+    margin-bottom: 2%;
+}
