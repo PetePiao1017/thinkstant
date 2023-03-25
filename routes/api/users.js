@@ -81,10 +81,13 @@ const extract_data_img = async (name) => {
 }
 
 // Extract Data from Epub
-const extract_data_epub = async (name) => {
+const extract_data_epub = (name) => {
     const filePath = path.join(__dirname, "../../uploads", name);
 
-    await epubToText.extract(filePath, (err,txt,n) => console.log(txt))
+    epubToText.extract(filePath, (err,txt,n) => {
+        text += txt
+    })
+    
 }
 
 
@@ -214,7 +217,9 @@ router.post("/upload_file", upload.array('files'), async (req,res) => {
             //Check the File Type == docx
             if(req.files[i].mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') await extract_data_docx(req.files[i].filename);
             //Check the File Type == Epub
-            if (req.files[i].mimetype === 'application/epub+zip') await extract_data_epub(req.files[i].filename);
+            if (req.files[i].mimetype === 'application/epub+zip'){
+                extract_data_epub(req.files[i].filename);
+            } 
             //File TYPE == Image'
             if(req.files[i].mimetype.includes('image')) await extract_data_img(req.files[i].filename);
             //FILE TYPE == Audio

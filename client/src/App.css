@@ -1,7 +1,7 @@
 body {
     /* color: #fff; */
     /* background: #4c535d; */
-    background-image: url("./img/bg.jpg");
+    background: radial-gradient(88.24% 323.19% at 22.28% 19.52%, #F1FBF7 0%, #F7DCDC 97.02%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     background-size:100%;
     background-repeat: no-repeat;
     background-position:center;
@@ -80,11 +80,7 @@ body {
   text-decoration: underline;
   color: yellowgreen;
 }
-.subtitle{
-    margin-bottom: 10px;
-    margin-top: 50px;
-    text-align: center;
-}
+
 .upload-button-box{
     max-width: 924px;
     height: 50%;

@@ -4,6 +4,8 @@ import React from 'react';
 import './DragDrop.css';
 import axios from 'axios';
 import { ProgressBar,Alert, Modal, Button} from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Dropzone from 'dropzone';
 
 // drag drop file component
 const DragDropFile = () => {
@@ -27,7 +29,7 @@ const DragDropFile = () => {
           countSize += selectedFiles[i].size
           formData.append("files", selectedFiles[i]);
         }
-
+        
         if (countSize >= 5242880){
           setIsShow(true)
         }
@@ -100,7 +102,7 @@ const DragDropFile = () => {
     
     // triggers when file is selected with click
     const handleChange = function(e) {
-    setError("");
+      setError("");
       e.preventDefault();
       if (e.target.files && e.target.files[0]) {
         const chosenFiles = Array.prototype.slice.call(e.target.files)
@@ -124,16 +126,21 @@ const DragDropFile = () => {
       <div className="col-md-12">
         
         <header>
-            <h2 className="text-dark subtitle" >
-            Chat With Our App
-            </h2>
+            <h1 className="text-dark subtitle">
+            Chat With Any PDF
+            </h1>
+            <h3 className="subtitle-1">
+              You want efficently analyze documents
+            </h3>
         </header>
-        <form id="form-file-upload" onDragEnter={handleDrag} onSubmit={submitHandler} method = 'post' encType = 'multipart/form-data'>
+        <form onDragEnter={handleDrag} onSubmit={submitHandler} method = 'post' encType = 'multipart/form-data'>
             <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
             <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
-            <div>
-                <h4>Drag and drop your file here</h4>
-                <button className="upload-button" onClick={onButtonClick}></button>
+            <div className="text">
+                <img src="pdf_icon.png" className="pdf-icon" alt = "pdf icon"></img>
+                <h4 className="title">Drop your PDF here or Browse or URL</h4>
+                <h4 className="subtitle_pdf">Find a PDF</h4>
+                <button  className="upload-button" onClick={onButtonClick}></button>
             </div> 
             </label>
             { dragActive && <div id="drag-file-element" onDragEnter={handleDrag} onDragLeave={handleDrag} onDragOver={handleDrag} onDrop={handleDrop}></div> }
@@ -163,6 +170,31 @@ const DragDropFile = () => {
                 </Button>
               </Modal.Footer>
             </Modal>
+        </div>
+        <div className="container second-stage">
+          <div className="title-features">
+            <h1>Features</h1>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <img className = "card-img-top" src="student.png" alt="students" />
+              <h2>For Students</h2>          
+              <p className="card-text">Enhance your learning experience with ChatPDF. Comprehend textbooks, handouts, and presentations effortlessly. Don't spend hours flipping through research papers and academic articles.
+Support your academic growth and succeed in your studies effectively and responsibly.</p>
+            </div>
+            <div className="col-md-4">
+              <img className = "card-img-top" src="work.png" alt="students" />
+              <h2>For Work</h2>           
+              <p className="card-text">Efficiently analyze your documents. From financial and sales reports to project and business proposals, training manuals, and legal contracts, ChatPDF can quickly provide you with the information you need.
+Your information is kept confidential in a secure cloud storage and deleted after 7 days for your peace of mind</p>
+            </div>
+            <div className="col-md-4">
+              <img className = "card-img-top" src="curious.png" alt="students" />
+              <h3>For Curious Minds</h3>            
+              <p className="card-text">Efficiently analyze your documents. From financial and sales reports to project and business proposals, training manuals, and legal contracts, ChatPDF can quickly provide you with the information you need.
+Your information is kept confidential in a secure cloud storage and deleted after 7 days for your peace of mind</p>
+            </div>
+          </div>
         </div>
       </div>
       
