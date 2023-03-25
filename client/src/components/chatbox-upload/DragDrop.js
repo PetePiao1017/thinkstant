@@ -133,6 +133,8 @@ const DragDropFile = () => {
               You want efficently analyze documents
             </h3>
         </header>
+
+        
         <form className = "dropzone" onDragEnter={handleDrag} onSubmit={submitHandler} method = 'post' encType = 'multipart/form-data'>
             <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
             <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
