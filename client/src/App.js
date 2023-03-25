@@ -12,10 +12,10 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Chatroom from "./components/layout/Chatroom";
-import DragDrop from "./components/layout/DragDrop";
+import DragDrop from "./components/chatbox-upload/DragDrop";
 import Payment from "./components/layout/Payment";
 import EmailVerify from "./components/EmailVerify";
-
+import Footer from './components/layout/Footer';
 
 if (localStorage.jwtToken) {
 
@@ -44,6 +44,7 @@ function App() {
           <Switch>
               <PrivateRoute exact path="/payment" component={Payment} />
           </Switch>
+          <Footer />
         </div>
       </Router>
     </Provider>
