@@ -1,8 +1,11 @@
 // import React, {Component} from 'reacat'
 import './About.css'
+import Navbar from '../../layout/Navbar';
+import Footer from '../../layout/Footer';
 
 const About = () => {
     return (
+        <><Navbar/>
         <div className='main'>
             <div className='head'>
                 <h1 className="title">
@@ -50,6 +53,8 @@ Ac in vitae accumsan sollicitudin auctor morbi sollicitudin dolor. Gravida netus
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 

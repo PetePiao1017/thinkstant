@@ -9,13 +9,26 @@
 .logo{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .navbar {
     justify-content: space-between;
-    margin: 3em 10em 5em 10em;
+    padding: 3em 10em 5em 10em;
+    flex-wrap: none!important;
 }
+.navbar-special {
+    background-image: url('../../assets/img/back.png');
+    justify-content: space-between;
+    padding: 3em 10em 5em 10em;
+}
+.nav-feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .nav-feature > .tab {
-    margin: 1.6em;
+    margin: auto;
     color: #000;
     text-decoration: none;
     font-family: 'Plus Jakarta Sans';
@@ -24,6 +37,12 @@
     font-size: 24px;
     line-height: 24px;
 }
+.nav-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .free{
     font-size: 20px;
     background-color: transparent;;

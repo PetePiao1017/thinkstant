@@ -1,31 +1,30 @@
-const multer = require("multer")
+const multer = require("multer");
 const storage = multer.diskStorage({
   //Specify the destination directory where the file needs to be saved
   destination: function (req, file, cb) {
-    cb(null, "./uploads")
+    console.log("Multer");
+    cb(null, "./uploads");
   },
   //Specify the name of the file. The date is prefixed to avoid overwriting of files.
   filename: function (req, file, cb) {
-    cb(null, Date.now() + "_" + file.originalname)
+    cb(null, Date.now() + "_" + file.originalname);
   },
-})
-
+});
 
 const upload = multer({
   storage,
-  filefilter (req, files, callback) {
+  filefilter(req, files, callback) {
     const ext = path.extname(files.originalname);
-    const allowed = ['.png', '.jpg', '.jpeg', '.pdf', '.doc', '.mp3', '.wav']
-    if(allowed.includes(ext)) {
-      callback(null, true)
+    const allowed = [".png", ".jpg", ".jpeg", ".pdf", ".doc", ".mp3", ".wav"];
+    if (allowed.includes(ext)) {
+      callback(null, true);
     } else {
-      callback(null, false)
+      callback(null, false);
     }
   },
-  limits:{
-    fileSize:5242880,
-  }
+  limits: {
+    fileSize: 5242880,
+  },
 });
 
-
-module.exports = upload
+module.exports = upload;

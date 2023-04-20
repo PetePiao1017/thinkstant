@@ -51,8 +51,8 @@ class Login extends Component {
     return (
       <div className="form-box">
         <form className="login-form" onSubmit={this.onSubmit}>
-          <div className=" login-container">
-            <div className=" img-container">
+          <div className="login-container">
+            <div className="col-md-6">
               <img
                 src="login-pic.png"
                 alt="image"
@@ -78,7 +78,7 @@ class Login extends Component {
                 </p>
               </div>
             </div>
-            <div className="col-md-6" style={{ paddingRight: "15%" }}>
+            <div className="col-md-6" style={{paddingLeft: "7.5%" , paddingRight: "7.5%" , paddingTop: "7.5%"}}>
               <h1 className="login-title">Welcome to Thinkstant</h1>
               <hr />
               <div className="text-center">

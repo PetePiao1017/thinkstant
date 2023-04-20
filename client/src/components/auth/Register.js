@@ -6,6 +6,7 @@ import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 import PasswordStrengthMeter from './PasswordStrengthMeter';
 import ReCAPTCHA from 'react-google-recaptcha';
+import './register.css';
 
 class Register extends Component{
     constructor(){
@@ -73,7 +74,7 @@ class Register extends Component{
                <div><Link to="/"><i className="fa fa-arrow-circle-left  "></i> Back to Home</Link></div>
 
                 <h2>Register</h2>
-                <hr/>
+                <br/>
                 <div className="form-group">
                     <input type="text" 
                            id="name" 
@@ -133,9 +134,12 @@ class Register extends Component{
                     onChange = {this.validateCaptcha}
                 />
                 <div className="form-group">
+                    <br />
                     <button type="submit" className="btn btn-primary btn-block btn-lg">Sign Up</button>
                 </div>
-                <div className="text-center">Already have an account? <Link to="/login">Login here</Link></div>
+                <div className="text-center">Already have an account? <br />
+                  <Link to="/login">Login here</Link>
+                </div>
 
             </form>
         </div>

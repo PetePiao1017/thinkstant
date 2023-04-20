@@ -1,7 +1,11 @@
 import './FAQ.css'
+import Navbar from '../../layout/Navbar';
+import Footer from '../../layout/Footer';
+
 
 const FAQ = () => {
     return (
+        <><Navbar/>
         <div className='faq-container'>
             <div className='faq-title'>
                 <h1>You have got questions?</h1>
@@ -14,7 +18,7 @@ const FAQ = () => {
                 <br /> 
             </div>
             <div className='col-md-12 faq-card'>
-                <div className='col-md-6'>
+                <div className='col-md-6' style={{ paddingRight: "5%" }}>
                     <>
                         <h4>Is there a free trial available?</h4>
                         <p>Lorem ipsum dolor sit amet consectetur. Fames duis nam nunc cras commodo. Id lacus elementum pharetra sed. Posuere orci mauris bibendum magna sed et. Vulputate.</p>
@@ -53,6 +57,8 @@ const FAQ = () => {
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
 
     )
 }

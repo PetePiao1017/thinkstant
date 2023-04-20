@@ -1,7 +1,10 @@
 import '../Policy/Policy.css'
+import Navbar from '../../layout/Navbar'
+import Footer from '../../layout/Footer'
 
 const Policy = () => {
     return (
+        <><Navbar />
         <div className='policy-container'>
             <h1 className='policy-title'>
                 Privacy Notice
@@ -38,6 +41,8 @@ const Policy = () => {
             We recommend that you print a copy of these Legal Terms for your records.
             </p>
         </div>
+        <Footer />
+        </>
     )
 }
 
