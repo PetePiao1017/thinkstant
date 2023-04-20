@@ -17,8 +17,9 @@
     border-radius: 100px;
   }
 .faq-question{
+
     margin-left: 8%;
-    padding-top: 1%;
+    padding-top: 2%;
 }
 .faq-answer{
     margin-top: 2%;
@@ -30,12 +31,12 @@
 }
 .get-in-touch-btn{
     margin-left: 35%;
-    float: right;
+    margin-right: 5%;
     width:10%;
     height: 60px;
-    border-radius: 50px;
-    background-image: linear-gradient(rgba(109, 220, 255, 1), rgba(127, 96, 249, 1));
-    border-color: transparent;
+    border-radius: 100px;
+    background: linear-gradient(98.24deg, #6DDCFF 0%, #7F60F9 100%);
+    border: none;
     font-size: 16px;
     color: white;
 }

@@ -19,7 +19,7 @@ app.use(
 
 app.use(bodyParser.json());
 
-const dbURL =  "mongodb://localhost:27017/mern-auth";
+const dbURL =  "mongodb://127.0.0.1:27017/mern-auth";
 
 //connect to MongoDB
 mongoose

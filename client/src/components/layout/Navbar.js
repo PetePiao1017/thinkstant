@@ -14,19 +14,25 @@ class Navbar extends Component{
         return(
             <>
             <nav className="navbar">
-              <span className="logo">
-                <img className="logo" src="logo.png" alt="logo"></img>
-                <h2 className="text-dark logo-text" style={{margin:"10px"}} to="/" >thinkstant</h2>
-              </span>
-              <span className="nav-feature">
-                <Link className="tab">Chatpdf</Link>
-                <Link className="tab">Features</Link>
-                <Link className="tab">Pricing</Link>
-                <Link className="tab">Support</Link>
-              </span>
-              <span className="start-free-trail">
-                <button className="free">Start Free Trial</button>
-              </span>
+              <div className="col-md-2">
+                <span className="logo">
+                  <img className="logo" src="logo.png" alt="logo"></img>
+                  <h2 className="text-dark logo-text" style={{margin:"10px"}} to="/" >thinkstant</h2>
+                </span>
+              </div>
+              <div className="col-md-6">
+                <span className="nav-feature">
+                  <Link className="tab">Chatpdf</Link>
+                  <Link className="tab">Features</Link>
+                  <Link className="tab">Pricing</Link>
+                  <Link className="tab">Support</Link>
+                </span>
+              </div>
+              <div className="col-md-2">
+                <span className="nav-button">
+                  <button className="free">Start Free Trial</button>   
+                </span>            
+              </div>
             </nav>
             </>
         ) 
