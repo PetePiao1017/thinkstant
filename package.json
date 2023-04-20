@@ -54,7 +54,7 @@
     "styled-components": "^5.3.9",
     "text-from-image": "^1.1.1",
     "uninstall": "0.0.0",
-    "validator": "^12.1.0",
+    "validator": "^13.7.0",
     "word-extractor": "^1.0.4"
   },
   "devDependencies": {
