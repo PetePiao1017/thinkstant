@@ -12,10 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 load_dotenv()
-<<<<<<< HEAD
-openAI_key=os.getenv("OPENAI_API_KEY")
-=======
->>>>>>> 6ba737c10875ddfd2c3dc9d7caabcc7c1da13425
+# openAI_key=os.getenv("OPENAI_API_KEY")
 
 openAI_key = os.getenv("OPENAI_API_KEY")
 # openAI_key = "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"
