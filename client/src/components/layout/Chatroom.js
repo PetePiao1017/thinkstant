@@ -40,7 +40,7 @@ const Chatroom = (props) => {
     console.log(message)
     var query = new FormData();
     query.append("query", message);
-    axios.post("http://localhost:3081/api/ai/context",query).then((res) => {
+    axios.post("http://146.190.202.9:3081/api/ai/context",query).then((res) => {
    
       console.log(res);
       setMessages(

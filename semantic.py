@@ -2,7 +2,6 @@ from flask import Flask, request
 from flask_cors import CORS
 import openai
 import os
-import pinecone
 import re
 import tensorflow_hub as hub
 import numpy as np
@@ -13,6 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 load_dotenv()
+# openAI_key=os.getenv("OPENAI_API_KEY")
 
 openAI_key = os.getenv("OPENAI_API_KEY")
 # openAI_key = "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"
