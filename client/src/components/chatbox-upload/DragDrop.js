@@ -55,7 +55,7 @@ const DragDropFile = () => {
             text.append("text", res.data.result);
             console.log(res.data.result);
             axios
-              .post("http://localhost:3081/api/ai/embedding",text).then((re) => {
+              .post("http://146.190.202.9:3081/api/ai/embedding",text).then((re) => {
                 console.log(re.data.status)
                 if(re.data == "ok") {
                   history.push({
